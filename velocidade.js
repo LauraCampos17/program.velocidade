@@ -10,5 +10,13 @@ frm = addEventListener("submit", (e) =>{
     const condutor = Number(frm.inCondutor.value)
     let leve = permitida + (permitida *0.2)
 
-    if(condutor)
+    if(condutor <= leve) {
+        resp.innerText = `Situação: Sem multa`
+
+    } else if(condutor <= leve) {
+        resp.innerText = `Situação: Multa leve`
+
+    } else{
+        resp.innerText = `Situação: Multa grave`
+    }
 })
